@@ -1,0 +1,112 @@
+.wrapper {
+  background-color: #131414;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container {
+  border: 1px solid #495057;
+  padding: 2rem;
+  border-radius: 0.3rem;
+}
+
+// styles
+.inputContainer {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  margin-bottom: 1rem;
+}
+.input {
+  width: 80%;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+// sections
+
+.strengthSections {
+  width: 100%;
+  display: flex;
+  padding: 0 1rem;
+  gap: 0.5rem;
+  div {
+    background-color: gray;
+    border-radius: 0.2rem;
+    height: 0.2rem;
+    flex: 1;
+  }
+}
+
+/*------ Settings ------*/
+.EyeContainer {
+  transform: scale(0.6);
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+  cursor: pointer;
+}
+
+.EyeContainer .eye {
+  position: absolute;
+  right: 0;
+  animation: keyframes-fill 0.5s;
+}
+
+.EyeContainer .eye-slash {
+  position: absolute;
+  right: 0;
+  animation: keyframes-fill 0.5s;
+  display: none;
+}
+
+/* ------ Hide the default checkbox ------ */
+.EyeContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.EyeContainer .eye-slash {
+  display: block;
+}
+
+.EyeContainer.visible .eye {
+  display: block;
+}
+
+.EyeContainer.visible .eye-slash {
+  
+  display: none;
+}
